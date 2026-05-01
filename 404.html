@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=/Tin-Anniversary/">
-</head>
-<body>
-  <script>
-    window.location.href = '/Tin-Anniversary/';
-  </script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // 单页应用（SPA）在 GitHub Pages 上的路由修复脚本
+      var path = window.location.pathname;
+      var repoName = "/Tin-Anniversary"; // 你的仓库名
+
+      // 如果路径不是根路径，且不包含哈希，则重定向到 index.html
+      if (path !== repoName + "/" && path !== repoName + "/index.html") {
+        window.location.replace(repoName + "/#" + path);
+      } else {
+        window.location.replace(repoName + "/index.html");
+      }
+    </script>
+  </head>
+  <body>
+    Redirecting to home...
+  </body>
 </html>
